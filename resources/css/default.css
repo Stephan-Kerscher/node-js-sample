@@ -1,0 +1,144 @@
+body {
+  background-color: #444;
+}
+
+.Towerbar{
+position: fixed;
+top: 1%;
+left: 62%;
+height: 70%;
+width: 11%;
+background-color: #DDD;
+border: 3px solid #111;
+border-radius: .25em;
+}
+
+.Towerbar img{
+  cursor: pointer;
+}
+
+.Towerbar img:hover{
+   border: 2px solid #3089d8;
+}
+
+.selected{
+    border: 2px solid #3089d8;
+}
+
+.Ressourcenbar{
+  position: fixed;
+  top: 69%;
+  left: 5%;
+  height: 10%;
+  width: 50%;
+  background-color: #DDD;
+  border: 3px solid #111;
+  border-radius: .25em;
+}
+
+.Ressourcenbar ul{
+    display: inline-flex;
+		width:100%;
+    list-style: none;
+}
+
+.Ressourcenbar ul li{
+  margin-left: 13%;
+}
+
+.hidden {
+    display: none;
+}
+
+.screen-elements {
+  display: block;
+  width: 400px;
+  margin-left:425px;
+  margin-top: 100px;
+  border-width: 4px;
+  border-color: #16183F;
+  line-height: 40px;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.logo{
+  margin-top: 20px;
+  margin-left: 423px;
+  width: 400px;
+  height: auto;
+  border-style: solid;
+}
+
+.menu-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.start-solo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    border-style: solid;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.start-multi{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  border-style: solid;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.end-screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.gamestate{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  border-style: solid;
+  background-color: #FFF;
+}
+
+.retry{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  border-style: solid;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.back{
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: block;
+  border-style: solid;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li{
+  margin-top: 1%;
+}

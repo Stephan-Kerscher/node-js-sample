@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>StudiRush</title>
+    <link rel="stylesheet" href="resources/css/default.css">
+    <script type="text/javascript" src="resources/lib/phaser.min.js"></script>
+    <script type="text/javascript" src="resources/lib/phaser.js"></script>
+    <script type="text/javascript" src="resources/js/Boot.js"></script>
+    <script type="text/javascript" src="resources/js/Preloader.js"></script>
+    <script type="text/javascript" src="resources/js/MainMenu.js"></script>
+    <script type="text/javascript" src="resources/js/SoloGame.js"></script>
+    <script type="text/javascript" src="resources/js/GameState.js"></script>
+    <script type="text/javascript" src="resources/js/Tower.js"></script>
+    <script type="text/javascript" src="resources/js/WaveClass.js"></script>
+    <script type="text/javascript" src="resources/js/WaveHandler.js"></script>
+    <script type="text/javascript" src="resources/js/Controller.js"></script>
+    <script type="text/javascript" src="server/Server.js"></script>
+    <script type="text/javascript" src="client/client.js"></script>
+    <script src="http://bojan.pw:9005/socket.io/socket.io.js"></script>
+
+
+</head>
+<body>
+<div class = "menu-screen">
+  <image class="logo" src="resources/img/header.jpg" alt=header/>
+  <div class="screen-elements">
+    <span class="start-solo"> Start Soloplayer </span>
+    <span class="start-multi"> Start Multiplayer</span>
+  </div>
+</div>
+<div class = "end-screen hidden">
+  <image class="logo" src="resources/img/header.jpg" alt=header/>
+  <div class="screen-elements">
+    <span class="gamestate">Win</span>
+    <span class="retry">Retry</span>
+    <span class="back">Back to Menu</span>
+  </div>
+</div>
+<script type="text/javascript">
+window.onload = function(){
+
+  var game = new Phaser.Game(768, 384, Phaser.CANVAS, '');
+
+  game.state.add("Boot", Game.Boot);
+  game.state.add("Preloader", Game.Preloader);
+  game.state.add("MainMenu", Game.MainMenu);
+  game.state.add("SoloGame", Game.SoloGame);
+  game.state.add("GameState", Game.GameState);
+
+  game.state.start("Boot");
+
+};
+
+</script>
+<div class="Towerbar">
+    <ul>
+    <div id ="TowerA">
+      <img src="resources/css/img/coffee-tower.png" alt="towerA"/>
+      <li> Tower A </li>
+    </div>
+    <div id ="TowerB">
+      <img src="resources/css/img/coffee-tower.png" alt="towerB"/>
+      <li> Tower B </li>
+    </div>
+    <div id ="TowerC">
+      <img src="resources/css/img/coffee-tower.png" alt="towerC"/>
+      <li> Tower C </li>
+    </div>
+    <div id ="TowerD">
+      <img src="resources/css/img/coffee-tower.png" alt="towerD"/>
+      <li> Tower D </li>
+    </div>
+    </ul>
+  </div>
+
+  <div class="Ressourcenbar">
+    <ul class="c6">
+      	<li class="c2">Geld: <span class="money">XX</span>$</li>
+        <li class="c2">Welle: <span class="wave">1</span></li>
+        <li class="c2">Leben: <span class="live">10</span></li>
+    </ul>
+
+  </div>
+</body>
+
+</html>
