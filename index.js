@@ -6,6 +6,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   response.send('Hello!!!!!!!!!!!!!!')
+    response.sendRedirect("index.html")
 })
 
 app.listen(app.get('port'), function() {
